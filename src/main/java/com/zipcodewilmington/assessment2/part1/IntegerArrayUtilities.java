@@ -6,11 +6,15 @@ public class IntegerArrayUtilities {
     }
 
     public Integer[] range(int start, int stop) {
-        int length = 0;
-        Integer[] newArry = new Integer[11];
-        for ( int i = start; i <= stop; i++){
-            newArry[i] = i;
+        int length = stop - start;
+        Integer[] newArry = new Integer[length+1];
+        for ( int i = start, j = 0; i <= stop; i++){
+            newArry[j] = i;
+            j++;
         }
+//        for(int i = 0; i < newArry.length; i++){
+//            System.out.println(newArry[i]);
+//        }
         return newArry;
     }
 

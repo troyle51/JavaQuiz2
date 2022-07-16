@@ -17,7 +17,7 @@ public class ArrayUtility {
     }
 
     public Integer[] rotate(Integer[] array, Integer index) {
-        return  null;
+    return null;
     }
 
     public Integer countOccurrence(Integer[] array1, Integer[] array2, Integer valueToEvaluate) {
@@ -38,6 +38,20 @@ public class ArrayUtility {
     }
 
     public Integer mostCommon(Integer[] array) {
-        return null;
+        int maxCount = 0;
+        Integer mostCom = 0;
+        for(int i = 0; i < array.length; i++) {
+            int count = 0;
+            for (int j = 0; j < array.length; j++) {
+                if (array[i] == array[j]){
+                    count++;
+                }
+            }
+            if (count > maxCount) {
+                maxCount = count;
+                mostCom = array[i];
+            }
+        }
+        return mostCom;
     }
 }
